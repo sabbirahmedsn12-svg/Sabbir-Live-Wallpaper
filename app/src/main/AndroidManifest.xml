@@ -10,6 +10,17 @@
         android:label="Sabbir Live Wallpaper"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">
 
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
         <service
             android:name=".WallpaperService"
             android:label="Sabbir Live Wallpaper"
@@ -17,12 +28,12 @@
             android:exported="true">
 
             <intent-filter>
-                <action android:name="android.service.wallpaper.WallpaperService" />
+                <action android:name="android.service.wallpaper.WallpaperService"/>
             </intent-filter>
 
             <meta-data
                 android:name="android.service.wallpaper"
-                android:resource="@xml/wallpaper" />
+                android:resource="@xml/wallpaper"/>
 
         </service>
 
